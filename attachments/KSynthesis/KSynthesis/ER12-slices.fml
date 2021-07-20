@@ -1,0 +1,6 @@
+fm3 = FM (MI : (CT|MRI) (Nifti|DICOM) ; DICOM -> MRI ; CT <-> Nifti ; ) 
+fm4 = FM (MI : (Nifti|MRI) (CT|DICOM) ; !DICOM | !Nifti ; DICOM | Nifti ; )
+fm5 = FM (MI : (CT|MRI) (Nifti|DICOM) ; !MRI | !Nifti ; !CT | !DICOM ; DICOM -> MRI ; ) // redundant
+
+cmp34 = compare fm3 fm4
+cmp45 = compare fm4 fm5

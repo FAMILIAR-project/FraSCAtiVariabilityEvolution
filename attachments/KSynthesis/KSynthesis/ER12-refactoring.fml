@@ -1,0 +1,34 @@
+fm0 = FM (MI : ModalityAcquisition Format  ; 
+                    ModalityAcquisition : (MRI|CT) ; 
+                    Format : (DICOM|Nifti) [Anonymized] ; 
+                    DICOM -> MRI ; 
+                    MRI -> Anonymized ; )
+
+fm1 = FM (MI : ModalityAcquisition Format [Anonymized] ; // hum
+                    ModalityAcquisition : (DICOM|Nifti) ; // huh
+                    Format : (MRI|CT) ;  // huh
+                    !CT | !DICOM ; // well...
+		    CT | Anonymized ; 
+                    )
+
+cmp01 = compare fm0 fm1
+
+
+fm2 = FM (MI : ModalityAcquisition Format [Anonymized] ; 
+                    ModalityAcquisition : (MRI|CT) ; 
+		    MRI : [DICOM] ; 
+                    CT : [Nifti] ; 
+		    !DICOM | !Nifti ; DICOM | Nifti ; 
+		    MRI -> Anonymized ; 
+                    )
+
+
+addConstraint constraint (Nifti -> CT) to fm0
+
+cmp02 = compare fm0 fm2
+println "cmp02: ", cmp02
+
+addConstraint constraint (Nifti -> CT) to fm1
+
+cmp12 = compare fm1 fm2
+println "cmp12: ", cmp12
