@@ -30,14 +30,12 @@ You can download the .composite and .composite_diagram files below. Note that th
 
 
  #### main SCA composite of FraSCAti (other components are described below) 
-[![Alt
-text](attachments/ArchFm/org.ow2.frascati.FraSCAti.png)
 
-![org.ow2.frascati.FraSCAti.png](attachments/ArchFm/org.ow2.frascati.FraSCAti.png) <!-- .element height="40%" width="40%" -->
+![](attachments/ArchFm/org.ow2.frascati.FraSCAti.png) <!-- .element height="40%" width="40%" -->
 
 
  #### implementations, interfaces, bindings and properties 
-[[Image(wiki:ArchFm:org.ow2.frascati.assembly.factory.AssemblyFactory.png, 50%)]] 
+![](attachments/ArchFm/org.ow2.frascati.assembly.factory.AssemblyFactory.png) <!-- .element height="50%" width="50%" -->
 
  #### SCA composite of the FraSCAti parser
 [[Image(wiki:ArchFm:org.ow2.frascati.parser.Parser.png, 40%)]]
