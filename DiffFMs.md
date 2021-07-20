@@ -1,24 +1,29 @@
 # Feature Model Differences
 
+note: the content was originally written in 2011... we edited some parts
+
 When managing variability of an software product lines, reasoning about the differences of two feature models is of prior importance, as, for instance, SPLs and feature models evolve over time. Even small edits to an feature model, like moving a feature from one branch to another, can unintentionally change the set of valid feature combinations. Understanding the impact of the evolution of a feature model, thus the differences between two versions, is known to be impractical to determine manually.
 Until now, the problem of feature model differences has neither been recognized nor comprehensively been tackled by existing approaches. 
 We developed a set of syntactic and semantic techniques to compute, reason about and present differences. Thanks to these techniques, a practitioner can understand differences in a fine-grained way, visualize and manage a model of differences, augment an existing feature model with the differences or compute the differences only on some parts of the two feature models.
 
+preprint about Feature Model Differences: https://hal.inria.fr/hal-00713849v2/document
+
 
 Contributors (in alphabetical order): 
   * [Mathieu Acher (University of Namur, Belgium)](http://www.mathieuacher.com/)
-  * [http://www.i3s.unice.fr/%7Ecollet Philippe Collet (University of Nice Sophia Antipolis, France)] 
+  * [Philippe Collet (University of Nice Sophia Antipolis, France)](http://www.i3s.unice.fr/~collet)
   * Patrick Heymans (University of Namur, Belgium)
-  * [http://www.i3s.unice.fr/%7Elahire Philippe Lahire (University of Nice Sophia Antipolis, France)]
+  * [Philippe Lahire (University of Nice Sophia Antipolis, France)](http://www.i3s.unice.fr/~lahire)
   * Philippe Merle (INRIA Lille-Nord Europe, France)
-  * [http://chercheurs.lille.inria.fr/%7Ecquinton/ Clément Quinton (INRIA Lille-Nord Europe, France)]
+  * [Clément Quinton (INRIA Lille-Nord Europe, France)](http://chercheurs.lille.inria.fr/~cquinton/)
 
 
 # Short Tutorial 
 
 ## Running Example 
 
-[[Image(wiki:DiffFMs:applet1.jpg, 20%)]] [[Image(wiki:DiffFMs:applet2.jpg, 20%)]]
+<img src="attachments/DiffFMs/applet1.jpg" /> 
+<img src="attachments/DiffFMs/applet2.jpg" />
 
 In the following we compute differences between fm1 and fm2 (in this specific order).
 
@@ -234,14 +239,14 @@ serialize fmToDevelop into featureide // convert the feature model into FeatureI
 
 
  
-# Demonstration 
+## Demonstration 
 
 You can have a look at the [http://www.i3s.unice.fr/~acher/familiar/DiffSimpleDemo/ following screencast] that makes use of differencing techniques offered by FAMILIAR in the Eclipse/FeatureIDE environment. 
 In this screencast, we use the same example as above.
 
-# A Real World Example 
+## A Real World Example 
 
-The following are a visual representation (using [http://download.lero.ie/spl/s2t2/ S2T2]) of two feature models of FraSCAti, respectively for version 1.4 (you can also download the feature model ([attachment:Full14.fml FML], [attachment:Full14.m FeatureIDE] or [attachment:Full14.fmprimitives S2T2] format)) or version 1.5 (you can also download the feature model ([attachment:Full15.fml FML], [attachment:Full15.m FeatureIDE] or [attachment:Full15.fmprimitives S2T2] format)).
+The following are a visual representation (using [S2T2](http://download.lero.ie/spl/s2t2/) of two feature models of FraSCAti, respectively for version 1.4 (you can also download the feature model ([FML](attachments/DiffFMs/Full14.fml), [FeatureIDE](attachments/DiffFMs/Full14.m) or [S2T2](attachments/DiffFMs/Full14.fmprimitives) format or version 1.5 (you can also download the feature model ([FML](attachments/DiffFMs/Full15.fml), [FeatureIDE](attachments/DiffFMs/Full15.m) or [S2T2](attachments/DiffFMs/Full15.fmprimitives) format.
 
 ```
 #!html
@@ -251,6 +256,7 @@ The case study FraSCAti is a typical example in which the problem of feature mod
 
 The challenge for a practitioner (e.g., software architect) is, for example, to understand and validate the differences between two versions of FraSCAti w.r.t. variability.
 
-[[Image(wiki:DiffFMs:Full14.png, 30%)]] [[Image(wiki:DiffFMs:Full15.png, 30%)]]
+<img src="attachments/DiffFMs/Full14.png" /> 
+<img src="attachments/DiffFMs/Full15.png" />
 
 As a result, we used extensively the techniques presented above as well as the FAMILIAR language/environment. 
