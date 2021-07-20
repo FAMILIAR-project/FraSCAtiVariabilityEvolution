@@ -1,10 +1,9 @@
 # Reverse Engineering Architectural Feature Models 
 
-note: the content was originally written in 2011
+note: the content was originally written in 2011... we edited some parts
 
-The following web page provides material, details and results of the experiments we conduct in reverse engineering an architectural feature model of the [http://frascati.ow2.org FraSCAti project]. The web page is related to a paper submitted to [http://www.ecsa2011.org/ ECSA 2011 conference], entitled "Reverse Engineering Architectural Feature Models", co-authored by [http://www.i3s.unice.fr/~acher Mathieu Acher], [http://www.fundp.ac.be/universite/personnes/page_view/01005760/ Anthony Cleve], [http://www.i3s.unice.fr/~collet Philippe Collet], [http://www.lifl.fr/~merle Philippe Merle], [http://www.lifl.fr/~duchien/Laurence/index.html Laurence Duchien] and [http://www.i3s.unice.fr/~lahire Philippe Lahire]
+The following web page provides material, details and results of the experiments we conduct in reverse engineering an architectural feature model of the [FraSCAti project](http://frascati.ow2.org). The web page is related to a paper accepted at [ECSA 2011 conference](http://www.ecsa2011.org/), entitled "Reverse Engineering Architectural Feature Models" (preprint here: https://hal.inria.fr/inria-00614984) 
 
-'''NEW''' The paper has been accepted!
 
 ## Reverse Engineering FraSCAti Architectural Feature Model 
 
@@ -32,6 +31,9 @@ You can download the .composite and .composite_diagram files below. Note that th
 
  #### main SCA composite of FraSCAti (other components are described below) 
 [[Image(wiki:ArchFm:org.ow2.frascati.FraSCAti.png, 40%)]]
+[![Alt
+text](attachments/ArchFm/org.ow2.frascati.FraSCAti.png)
+
 
  #### implementations, interfaces, bindings and properties 
 [[Image(wiki:ArchFm:org.ow2.frascati.assembly.factory.AssemblyFactory.png, 50%)]] 
