@@ -85,26 +85,26 @@ In this web page, we describe how we realize the extraction procedure using FAMI
 
  ### 150% architectural feature model 
 
-The following figure is a visual representation of a so called "150% architectural FM" (you can also download the FM ([attachment:fm150.m FeatureIDE] or [attachment:fm150.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
+The following figure is a visual representation of a so called "150% architectural FM" (you can also download the FM ([FeatureIDE](attachments/ArchFm/fm150.m) or [S2T2](attachments/ArchFm/fm150.fmprimitives) format)), using [S2T2](http://download.lero.ie/spl/s2t2/).
 
 <img src="attachments/ArchFm/fm150.png" />
 
  ### plugins feature model
 
-The following figure is a visual representation of a so called "plugins FM" (you can also download the FM ([attachment:fmPlugin.m FeatureIDE] or [attachment:fmPlugin.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
+The following figure is a visual representation of a so called "plugins FM". You can also download the FM [FeatureIDE](attachments/ArchFm/fmPlugin.m) or [S2T2](attachments/ArchFm/fmPlugin.fmprimitives) format, using [S2T2](http://download.lero.ie/spl/s2t2/).
 
 <img src="attachments/ArchFm/fmPlugin.png" />
 
  ### FMFull, an aggregation of the two FMs with constraints 
 
-The following figure is a visual representation of a "FMFull" (you can also download the FM ([attachment:fmFull.m FeatureIDE] or [attachment:fmFull.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
+The following figure is a visual representation of a "FMFull". You can also download the FM ([FeatureIDE](attachments/ArchFm/fmFull.m) or [S2T2](attachments/ArchFm/fmFull.fmprimitives) format, using [S2T2](http://download.lero.ie/spl/s2t2/).
 
 <img src="attachments/ArchFm/fmFull.png" />
 
  ### enforced architectural feature model 
 
 
-The following figure is a visual representation of the enforced architectural FM (you can also download the FM ([attachment:fmArch.m FeatureIDE] or [attachment:fmArch.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
+The following figure is a visual representation of the enforced architectural FM (you can also download the FM ([FeatureIDE](attachments/ArchFm/fmArch.m) or [S2T2](attachments/ArchFm/fmArch.fmprimitives) format, using [S2T2](http://download.lero.ie/spl/s2t2/).
 
 <img src="attachments/ArchFm/fmArch.png" />
 
