@@ -30,9 +30,10 @@ You can download the .composite and .composite_diagram files below. Note that th
 
 
  #### main SCA composite of FraSCAti (other components are described below) 
-[[Image(wiki:ArchFm:org.ow2.frascati.FraSCAti.png, 40%)]]
 [![Alt
 text](attachments/ArchFm/org.ow2.frascati.FraSCAti.png)
+
+![org.ow2.frascati.FraSCAti.png](attachments/ArchFm/org.ow2.frascati.FraSCAti.png) <!-- .element height="40%" width="40%" -->
 
 
  #### implementations, interfaces, bindings and properties 
