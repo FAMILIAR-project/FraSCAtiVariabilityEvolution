@@ -1,0 +1,200 @@
+Socialtext_Usability = FM (Usability :  SectionEditing PageTemplates DoubleClickEdit Toolbar WYSIWYGEditing AccessKeys AutoSignature ;  )
+
+Bitweaver_Usability = FM (Usability :  SectionEditing [PageTemplates] DoubleClickEdit Toolbar WYSIWYGEditing AccessKeys AutoSignature ; AutoSignature : XHTML1_0Strict ; Usability -> !PageTemplates;  )
+
+Sputnik_Output = FM (Output :  [HTML] CSSStylesheets [PrinterFriendly] [MobileFriendly] [ThemesSkins] RSSFeeds ATOMFeeds ; Output -> !HTML; Output -> !PrinterFriendly; Output -> !MobileFriendly; Output -> !ThemesSkins;  )
+
+Sputnik_Usability = FM (Usability :  [SectionEditing] [PageTemplates] [DoubleClickEdit] [Toolbar] [WYSIWYGEditing] AccessKeys AutoSignature ; AccessKeys : XHTML1_1 ; Usability -> !SectionEditing; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !Toolbar; Usability -> !WYSIWYGEditing;  )
+
+PukiWiki_Usability = FM (Usability :  SectionEditing PageTemplates [DoubleClickEdit] Toolbar [WYSIWYGEditing] [AccessKeys] AutoSignature ; PageTemplates : X3_1538305598 ; Toolbar : X3_2779 ; AutoSignature : XHTML1_117907468 ; Usability -> !DoubleClickEdit; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys;  )
+
+Gazest_Usability = FM (Usability :  [SectionEditing] [PageTemplates] DoubleClickEdit Toolbar [WYSIWYGEditing] [AccessKeys] [AutoSignature] ; DoubleClickEdit : XHTML1_0Transitional_891773139 ; Usability -> !AutoSignature;  )
+
+Intodit_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] [MobileFriendly] [ThemesSkins] [RSSFeeds] [ATOMFeeds] ;  )
+
+Bitweaver_Output = FM (Output :  [HTML] CSSStylesheets [PrinterFriendly] [MobileFriendly] [ThemesSkins] RSSFeeds ATOMFeeds ;  )
+
+SubWiki_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] [MobileFriendly] [ThemesSkins] [RSSFeeds] [ATOMFeeds] ; Output -> !HTML; Output -> !CSSStylesheets; Output -> !RSSFeeds;  )
+
+Hatta_Output = FM (Output :  [HTML] [CSSStylesheets] PrinterFriendly [MobileFriendly] [ThemesSkins] [RSSFeeds] ATOMFeeds ; Output -> !HTML; Output -> !CSSStylesheets; Output -> !MobileFriendly; Output -> !ThemesSkins; Output -> !RSSFeeds;  )
+
+MidgardWiki_Usability = FM (Usability :  SectionEditing PageTemplates DoubleClickEdit Toolbar WYSIWYGEditing AccessKeys [AutoSignature] ; SectionEditing : X3 ; PageTemplates : XHTML1_0Strict_1789953802 ; Toolbar : PrintCSS ; Usability -> !AutoSignature;  )
+
+Intodit_Usability = FM (Usability :  [SectionEditing] [PageTemplates] DoubleClickEdit [Toolbar] WYSIWYGEditing AccessKeys [AutoSignature] ; Usability -> !Toolbar;  )
+
+MidgardWiki_Output = FM (Output :  HTML [CSSStylesheets] PrinterFriendly MobileFriendly [ThemesSkins] [RSSFeeds] [ATOMFeeds] ; HTML : X2 ; PrinterFriendly : X2_2778 ; MobileFriendly : X2_1184329468 ; Output -> !CSSStylesheets; Output -> !ThemesSkins; Output -> !RSSFeeds; Output -> !ATOMFeeds;  )
+
+MoniWiki_Output = FM (Output :  HTML CSSStylesheets PrinterFriendly MobileFriendly ThemesSkins RSSFeeds ATOMFeeds ; HTML : X2 ; ThemesSkins : X3_1423457552 ; RSSFeeds : X3_1636333262 ;  )
+
+WikiSpot_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] MobileFriendly ThemesSkins RSSFeeds ATOMFeeds ; MobileFriendly : FrontPage ; ThemesSkins : Http__www_example_com ; RSSFeeds : HeadlineSubHeading ; ATOMFeeds : Bold ; Output -> !HTML; Output -> !CSSStylesheets; Output -> !PrinterFriendly;  )
+
+PBwiki_Usability = FM (Usability :  SectionEditing PageTemplates DoubleClickEdit Toolbar WYSIWYGEditing AccessKeys AutoSignature ;  )
+
+Hatta_Usability = FM (Usability :  SectionEditing PageTemplates DoubleClickEdit [Toolbar] [WYSIWYGEditing] [AccessKeys] AutoSignature ; AutoSignature : HTML4 ; Usability -> !Toolbar; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys;  )
+
+WikiSpot_Usability = FM (Usability :  [SectionEditing] [PageTemplates] [DoubleClickEdit] Toolbar WYSIWYGEditing [AccessKeys] [AutoSignature] ; Usability -> !SectionEditing; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !AccessKeys; Usability -> !AutoSignature;  )
+
+UseMod_Usability = FM (Usability :  SectionEditing [PageTemplates] [DoubleClickEdit] Toolbar [WYSIWYGEditing] [AccessKeys] AutoSignature ; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys;  )
+
+XoWiki_Usability = FM (Usability :  SectionEditing [PageTemplates] [DoubleClickEdit] Toolbar WYSIWYGEditing AccessKeys [AutoSignature] ;  )
+
+TracWiki_Output = FM (Output :  HTML CSSStylesheets PrinterFriendly [MobileFriendly] [ThemesSkins] RSSFeeds ATOMFeeds ; HTML : X3_1473237046 ; RSSFeeds : X3_1636333262 ; Output -> !MobileFriendly; Output -> !ThemesSkins;  )
+
+PBwiki_Output = FM (Output :  HTML CSSStylesheets PrinterFriendly MobileFriendly ThemesSkins RSSFeeds ATOMFeeds ; HTML : X3_1473237046 ; CSSStylesheets : X2_850977674 ; PrinterFriendly : X3_291789862 ; MobileFriendly : CamelCaseLinkorFreeLink ; ThemesSkins : Http__www_externallink_com ; RSSFeeds : Level1Level2Level3Level4Level5Level6 ; ATOMFeeds : Bold ;  )
+
+Groupswiki_Usability = FM (Usability :  [SectionEditing] [PageTemplates] [DoubleClickEdit] Toolbar [WYSIWYGEditing] [AccessKeys] [AutoSignature] ;  )
+
+Groupswiki_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] [MobileFriendly] [ThemesSkins] [RSSFeeds] [ATOMFeeds] ;  )
+
+Socialtext_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] MobileFriendly ThemesSkins RSSFeeds ATOMFeeds ; MobileFriendly : Link_2368538 ; ThemesSkins : Http__www_example_com ; RSSFeeds : Headline ; ATOMFeeds : Bold ;  )
+
+XoWiki_Output = FM (Output :  HTML CSSStylesheets [PrinterFriendly] [MobileFriendly] [ThemesSkins] [RSSFeeds] ATOMFeeds ; CSSStylesheets : X2_850977674 ;  )
+
+TracWiki_Usability = FM (Usability :  SectionEditing [PageTemplates] [DoubleClickEdit] [Toolbar] [WYSIWYGEditing] [AccessKeys] AutoSignature ; AutoSignature : XHTML1_0Strict ; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !Toolbar; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys;  )
+
+OpenWikiNG_Usability = FM (Usability :  SectionEditing [PageTemplates] [DoubleClickEdit] [Toolbar] [WYSIWYGEditing] [AccessKeys] AutoSignature ; AutoSignature : XHTML1_0Transitional ; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !Toolbar; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys;  )
+
+JaWiki_Usability = FM (Usability :  SectionEditing [PageTemplates] [DoubleClickEdit] [Toolbar] [WYSIWYGEditing] [AccessKeys] AutoSignature ; AutoSignature : HTML4 ; Usability -> !PageTemplates;  )
+
+JaWiki_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] [MobileFriendly] ThemesSkins [RSSFeeds] ATOMFeeds ;  )
+
+Gazest_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] [MobileFriendly] [ThemesSkins] [RSSFeeds] [ATOMFeeds] ;  )
+
+Wiki_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] MobileFriendly ThemesSkins RSSFeeds ATOMFeeds ; MobileFriendly : PagenameorAliaspagenameorAliaspagename ; ThemesSkins : Http__somewhere_else_orhttp__somewhere_else_orAliashttp__somewhere_elseorAliashttp__somewhere_else ; RSSFeeds : HeadlineHeadlineHeadline ; ATOMFeeds : Boldorboldboldtext ; Output -> !HTML; Output -> !CSSStylesheets; Output -> !PrinterFriendly;  )
+
+Nexdo_Output = FM (Output :  HTML CSSStylesheets [PrinterFriendly] MobileFriendly ThemesSkins RSSFeeds ATOMFeeds ; HTML : HTML_2228139 ; CSSStylesheets : HTML_1453479374 ; MobileFriendly : HTML_161937908 ; ThemesSkins : HTML_1156792974 ; RSSFeeds : HTML_1610134890 ; ATOMFeeds : HTML_1169853600 ;  )
+
+MoniWiki_Usability = FM (Usability :  SectionEditing PageTemplates [DoubleClickEdit] Toolbar [WYSIWYGEditing] [AccessKeys] AutoSignature ; Toolbar : X3_2779 ; AutoSignature : XHTML1_0Transitional ; Usability -> !DoubleClickEdit; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys;  )
+
+Wiki_Usability = FM (Usability :  [SectionEditing] [PageTemplates] [DoubleClickEdit] Toolbar [WYSIWYGEditing] AccessKeys AutoSignature ; Usability -> !SectionEditing; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !WYSIWYGEditing;  )
+
+UseMod_Output = FM (Output :  [HTML] [CSSStylesheets] [PrinterFriendly] [MobileFriendly] [ThemesSkins] [RSSFeeds] [ATOMFeeds] ; Output -> !HTML; Output -> !CSSStylesheets; Output -> !RSSFeeds;  )
+
+SubWiki_Usability = FM (Usability :  SectionEditing [PageTemplates] [DoubleClickEdit] [Toolbar] [WYSIWYGEditing] [AccessKeys] [AutoSignature] ; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !Toolbar; Usability -> !WYSIWYGEditing; Usability -> !AccessKeys; Usability -> !AutoSignature;  )
+
+Nexdo_Usability = FM (Usability :  [SectionEditing] [PageTemplates] [DoubleClickEdit] [Toolbar] [WYSIWYGEditing] AccessKeys AutoSignature ; AccessKeys : Link ; AutoSignature : Http__www_example_comhttp__www_example_comwww_example_com ; Usability -> !SectionEditing; Usability -> !PageTemplates; Usability -> !DoubleClickEdit; Usability -> !Toolbar; Usability -> !WYSIWYGEditing;  )
+
+OpenWikiNG_Output = FM (Output :  [HTML] CSSStylesheets [PrinterFriendly] [MobileFriendly] ThemesSkins [RSSFeeds] ATOMFeeds ; Output -> !HTML; Output -> !PrinterFriendly; Output -> !MobileFriendly; Output -> !RSSFeeds;  )
+
+PukiWiki_Output = FM (Output :  [HTML] CSSStylesheets PrinterFriendly [MobileFriendly] [ThemesSkins] [RSSFeeds] ATOMFeeds ; CSSStylesheets : X3_886274158 ; PrinterFriendly : X3_291789862 ; ATOMFeeds : X3_506881130 ; Output -> !HTML; Output -> !MobileFriendly; Output -> !ThemesSkins; Output -> !RSSFeeds;  )
+
+fm_Intodit = FM(WikiMatrix : ID ; )
+foreach(f in Intodit_*) do
+insert f into fm_Intodit.WikiMatrix with mand
+end
+removeFeature fm_Intodit.ID
+
+fm_Sputnik = FM(WikiMatrix : ID ; )
+foreach(f in Sputnik_*) do
+insert f into fm_Sputnik.WikiMatrix with mand
+end
+removeFeature fm_Sputnik.ID
+
+fm_XoWiki = FM(WikiMatrix : ID ; )
+foreach(f in XoWiki_*) do
+insert f into fm_XoWiki.WikiMatrix with mand
+end
+removeFeature fm_XoWiki.ID
+
+fm_Bitweaver = FM(WikiMatrix : ID ; )
+foreach(f in Bitweaver_*) do
+insert f into fm_Bitweaver.WikiMatrix with mand
+end
+removeFeature fm_Bitweaver.ID
+
+fm_WikiSpot = FM(WikiMatrix : ID ; )
+foreach(f in WikiSpot_*) do
+insert f into fm_WikiSpot.WikiMatrix with mand
+end
+removeFeature fm_WikiSpot.ID
+
+fm_MidgardWiki = FM(WikiMatrix : ID ; )
+foreach(f in MidgardWiki_*) do
+insert f into fm_MidgardWiki.WikiMatrix with mand
+end
+removeFeature fm_MidgardWiki.ID
+
+fm_UseMod = FM(WikiMatrix : ID ; )
+foreach(f in UseMod_*) do
+insert f into fm_UseMod.WikiMatrix with mand
+end
+removeFeature fm_UseMod.ID
+
+fm_Hatta = FM(WikiMatrix : ID ; )
+foreach(f in Hatta_*) do
+insert f into fm_Hatta.WikiMatrix with mand
+end
+removeFeature fm_Hatta.ID
+
+fm_Nexdo = FM(WikiMatrix : ID ; )
+foreach(f in Nexdo_*) do
+insert f into fm_Nexdo.WikiMatrix with mand
+end
+removeFeature fm_Nexdo.ID
+
+fm_MoniWiki = FM(WikiMatrix : ID ; )
+foreach(f in MoniWiki_*) do
+insert f into fm_MoniWiki.WikiMatrix with mand
+end
+removeFeature fm_MoniWiki.ID
+
+fm_OpenWikiNG = FM(WikiMatrix : ID ; )
+foreach(f in OpenWikiNG_*) do
+insert f into fm_OpenWikiNG.WikiMatrix with mand
+end
+removeFeature fm_OpenWikiNG.ID
+
+fm_JaWiki = FM(WikiMatrix : ID ; )
+foreach(f in JaWiki_*) do
+insert f into fm_JaWiki.WikiMatrix with mand
+end
+removeFeature fm_JaWiki.ID
+
+fm_Gazest = FM(WikiMatrix : ID ; )
+foreach(f in Gazest_*) do
+insert f into fm_Gazest.WikiMatrix with mand
+end
+removeFeature fm_Gazest.ID
+
+fm_PBwiki = FM(WikiMatrix : ID ; )
+foreach(f in PBwiki_*) do
+insert f into fm_PBwiki.WikiMatrix with mand
+end
+removeFeature fm_PBwiki.ID
+
+fm_Socialtext = FM(WikiMatrix : ID ; )
+foreach(f in Socialtext_*) do
+insert f into fm_Socialtext.WikiMatrix with mand
+end
+removeFeature fm_Socialtext.ID
+
+fm_TracWiki = FM(WikiMatrix : ID ; )
+foreach(f in TracWiki_*) do
+insert f into fm_TracWiki.WikiMatrix with mand
+end
+removeFeature fm_TracWiki.ID
+
+fm_SubWiki = FM(WikiMatrix : ID ; )
+foreach(f in SubWiki_*) do
+insert f into fm_SubWiki.WikiMatrix with mand
+end
+removeFeature fm_SubWiki.ID
+
+fm_Wiki = FM(WikiMatrix : ID ; )
+foreach(f in Wiki_*) do
+insert f into fm_Wiki.WikiMatrix with mand
+end
+removeFeature fm_Wiki.ID
+
+fm_Groupswiki = FM(WikiMatrix : ID ; )
+foreach(f in Groupswiki_*) do
+insert f into fm_Groupswiki.WikiMatrix with mand
+end
+removeFeature fm_Groupswiki.ID
+
+fm_PukiWiki = FM(WikiMatrix : ID ; )
+foreach(f in PukiWiki_*) do
+insert f into fm_PukiWiki.WikiMatrix with mand
+end
+removeFeature fm_PukiWiki.ID
+
