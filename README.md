@@ -7,3 +7,12 @@ We are moving the content here:
  * [Reverse engineering architectural feature models](ArchFm.md)
  * [Feature model differences](DiffFMs.md)
  * [Extraction and evolution of architectural variability models in plugin-based systems](FraSCAti.md)
+ * see others with VariCell, KSynthesis, etc. (unformated) 
+
+The content here is mostly pedagogical explanations, tutorials, and some visualizations. 
+There are also FeatureIDE models. 
+Normally, the scripts are executable in the [FAMILIAR repository](https://github.com/FAMILIAR-project/familiar-language/), either with a .fml file or with a Java test case. 
+For example: https://github.com/FAMILIAR-project/familiar-language/blob/master/familiar.test/src/test/java/fr/familiar/featureide/AdamArchTest.java
+for the FraSCAti evolution/reverse engineering. 
+
+
