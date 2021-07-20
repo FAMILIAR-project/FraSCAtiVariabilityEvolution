@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.osoa.org/xmlns/sca/1.0" name="org.ow2.frascati.assembly.factory.AssemblyFactory">
+  <service name="composite-manager" promote="assembly-factory/composite-manager">
+    <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+  </service>
+  <service name="classloader-manager" promote="assembly-factory/classloader-manager/">
+    <interface.java interface="org.ow2.frascati.assembly.factory.api.ClassLoaderManager"/>
+  </service>
+  <reference name="composite-parser" promote="assembly-factory/composite-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </reference>
+  <reference name="contribution-parser" promote="assembly-factory/contribution-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </reference>
+  <reference name="membrane-generation" autowire="true" promote="assembly-factory/membrane-generation sca-interface-native/membrane-generation wsdl-compiler/membrane-generation">
+    <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+  </reference>
+  <reference name="component-factory" autowire="true" promote="assembly-factory/component-factory sca-composite/component-factory sca-implementation-java/component-factory sca-implementation-bpel/component-factory frascati-implementation-osgi/component-factory frascati-implementation-resource/component-factory frascati-implementation-script/component-factory sca-implementation-spring/component-factory">
+    <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+  </reference>
+  <reference name="type-factory" autowire="true" promote="sca-composite/type-factory sca-component/type-factory sca-composite-service/type-factory sca-composite-reference/type-factory sca-component-service/type-factory sca-component-reference/type-factory">
+    <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+  </reference>
+  <component name="assembly-factory">
+    <implementation.java class="org.ow2.frascati.assembly.factory.manager.AssemblyFactoryManager"/>
+    <service name="composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </service>
+    <service name="classloader-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.ClassLoaderManager"/>
+    </service>
+    <reference name="composite-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="contribution-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </reference>
+    <reference name="component-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+    <reference name="composite-processor" target="sca-composite/composite-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-composite">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaCompositeProcessor"/>
+    <service name="composite-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+    <reference name="component-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+    <reference name="intent-loader" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <reference name="component-processor" target="sca-component/component-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="service-processor" target="sca-composite-service/composite-service-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="reference-processor" target="sca-composite-reference/composite-reference-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="property-processor" target="sca-composite-property/property-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="wire-processor" target="sca-wire/wire-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-composite-service">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaCompositeServiceProcessor"/>
+    <service name="composite-service-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="interface-processor" target="sca-interface/interface-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="binding-processor" target="sca-binding/binding-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="intent-loader" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <reference name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+  </component>
+  <component name="sca-composite-reference">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaCompositeReferenceProcessor"/>
+    <service name="composite-reference-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="interface-processor" target="sca-interface/interface-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="binding-processor" target="sca-binding/binding-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="intent-loader" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <reference name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+  </component>
+  <component name="sca-composite-property">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaCompositePropertyProcessor"/>
+    <service name="property-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference multiplicity="0..n" name="property-types">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-wire">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaWireProcessor"/>
+    <service name="wire-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <component name="sca-component">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaComponentProcessor"/>
+    <service name="component-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+    <reference name="intent-loader" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <reference name="implementation-processor" target="sca-implementation/implementation-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="service-processor" target="sca-component-service/component-service-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="reference-processor" target="sca-component-reference/component-reference-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="property-processor" target="sca-component-property/property-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-component-service">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaComponentServiceProcessor"/>
+    <service name="component-service-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="interface-processor" target="sca-interface/interface-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="binding-processor" target="sca-binding/binding-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="intent-loader" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <reference name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+  </component>
+  <component name="sca-component-reference">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaComponentReferenceProcessor"/>
+    <service name="component-reference-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="interface-processor" target="sca-interface/interface-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="binding-processor" target="sca-binding/binding-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+    <reference name="intent-loader" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <reference name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+  </component>
+  <component name="sca-component-property">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaComponentPropertyProcessor"/>
+    <service name="property-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference multiplicity="0..n" name="property-types">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-implementation">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaImplementationProcessor"/>
+    <service name="implementation-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference multiplicity="0..n" name="implementations">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-implementation-composite">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaImplementationCompositeProcessor"/>
+    <service name="implementation-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="composite-processor" target="sca-composite/composite-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <wire source="sca-implementation/implementations" target="sca-implementation-composite/implementation-processor"/>
+  <component name="sca-implementation-java">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaImplementationJavaProcessor"/>
+    <service name="implementation-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="component-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-implementation/implementations" target="sca-implementation-java/implementation-processor"/>
+  <component name="sca-interface">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaInterfaceProcessor"/>
+    <service name="interface-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference multiplicity="0..n" name="interfaces">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-interface-java">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaInterfaceJavaProcessor"/>
+    <service name="interface-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <wire source="sca-interface/interfaces" target="sca-interface-java/interface-processor"/>
+  <component name="sca-binding">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaBindingProcessor"/>
+    <service name="binding-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference multiplicity="0..n" name="bindings">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </reference>
+  </component>
+  <component name="sca-binding-sca">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaBindingScaProcessor"/>
+    <service name="binding-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="composite-manager" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="sca-binding-sca/binding-processor"/>
+  <component name="sca-property-type-java">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaPropertyTypeJavaProcessor"/>
+    <service name="property-type-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <wire source="sca-composite-property/property-types" target="sca-property-type-java/property-type-processor"/>
+  <wire source="sca-component-property/property-types" target="sca-property-type-java/property-type-processor"/>
+  <component name="sca-property-type-xsd">
+    <implementation.java class="org.ow2.frascati.assembly.factory.processor.ScaPropertyTypeXsdProcessor"/>
+    <service name="property-type-processor">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <wire source="sca-composite-property/property-types" target="sca-property-type-xsd/property-type-processor"/>
+  <wire source="sca-component-property/property-types" target="sca-property-type-xsd/property-type-processor"/>
+  <reference name="binding-factory" autowire="true" promote="frascati-binding-jms/binding-factory frascati-binding-jsonrpc/binding-factory frascati-binding-rest/binding-factory frascati-binding-rmi/binding-factory sca-binding-ws/binding-factory sca-binding-upnp/binding-factory">
+    <interface.java interface="org.objectweb.fractal.bf.BindingFactory"/>
+  </reference>
+  <component name="frascati-binding-http">
+    <implementation.java class="org.ow2.frascati.binding.http.FrascatiBindingHttpProcessor"/>
+    <reference name="servlet-manager" target="servlet-manager/servlet-manager">
+      <interface.java interface="org.ow2.frascati.binding.http.ServletManager"/>
+    </reference>
+    <reference name="composite-manager" autowire="true">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <component name="servlet-manager">
+    <implementation.java class="org.ow2.frascati.binding.http.JettyServletManager"/>
+    <service name="servlet-manager">
+      <interface.java interface="org.ow2.frascati.binding.http.ServletManager"/>
+    </service>
+  </component>
+  <wire source="sca-binding/bindings" target="frascati-binding-http/binding-processor"/>
+  <component name="frascati-binding-jms">
+    <implementation.java class="org.ow2.frascati.binding.jms.FrascatiBindingJmsProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="frascati-binding-jms/binding-processor"/>
+  <component name="frascati-binding-jsonrpc">
+    <implementation.java class="org.ow2.frascati.binding.jsonrpc.FrascatiBindingJsonRpcProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="frascati-binding-jsonrpc/binding-processor"/>
+  <component name="frascati-binding-rest">
+    <implementation.java class="org.ow2.frascati.binding.rest.FrascatiBindingRestProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="frascati-binding-rest/binding-processor"/>
+  <component name="frascati-binding-rmi">
+    <implementation.java class="org.ow2.frascati.binding.rmi.FrascatiBindingJavaRmiProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="frascati-binding-rmi/binding-processor"/>
+  <component name="sca-binding-ws">
+    <implementation.java class="org.ow2.frascati.binding.ws.ScaBindingWsProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="sca-binding-ws/binding-processor"/>
+  <component name="frascati-binding-jna">
+    <implementation.java class="org.ow2.frascati.native_.binding.FrascatiBindingJnaProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <wire source="sca-binding/bindings" target="frascati-binding-jna/binding-processor"/>
+  <component name="sca-binding-upnp">
+    <implementation.java class="org.ow2.frascati.upnp.binding.FrascatiBindingUPnPProcessor"/>
+    <service name="binding-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-binding/bindings" target="sca-binding-upnp/binding-processor"/>
+  <component name="frascati-implementation-fractal">
+    <implementation.java class="org.ow2.frascati.implementation.fractal.FrascatiImplementationFractalProcessor"/>
+    <service name="implementation-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <wire source="sca-implementation/implementations" target="frascati-implementation-fractal/implementation-processor"/>
+  <component name="frascati-implementation-osgi">
+    <implementation.java class="org.ow2.frascati.implementation.osgi.FrascatiImplementationOsgiProcessor"/>
+    <service name="implementation-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="component-factory">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-implementation/implementations" target="frascati-implementation-osgi/implementation-processor"/>
+  <component name="frascati-implementation-resource">
+    <implementation.java class="org.ow2.frascati.implementation.resource.FrascatiImplementationResourceProcessor"/>
+    <service name="implementation-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="component-factory">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-implementation/implementations" target="frascati-implementation-resource/implementation-processor"/>
+  <component name="frascati-implementation-script">
+    <implementation.java class="org.ow2.frascati.implementation.script.FrascatiImplementationScriptProcessor"/>
+    <reference name="composite-manager" target="assembly-factory/composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </reference>
+    <service name="implementation-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="component-factory">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-implementation/implementations" target="frascati-implementation-script/implementation-processor"/>
+  <component name="sca-implementation-spring">
+    <implementation.java class="org.ow2.frascati.implementation.spring.ScaImplementationSpringProcessor"/>
+    <service name="implementation-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="component-factory">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+  </component>
+  <wire source="sca-implementation/implementations" target="sca-implementation-spring/implementation-processor"/>
+  <component name="sca-interface-native">
+    <implementation.java class="org.ow2.frascati.native_.FraSCAtiInterfaceNativeProcessor"/>
+    <property name="target-directory">generated-frascati-sources</property>
+    <reference name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </reference>
+    <reference name="native-compiler" target="jnaerator/native-compiler">
+      <interface.java interface="org.ow2.frascati.native_.NativeCompiler"/>
+    </reference>
+    <service name="interface-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <component name="jnaerator">
+    <implementation.java class="org.ow2.frascati.native_.JNAeratorCompiler"/>
+    <service name="native-compiler">
+      <interface.java interface="org.ow2.frascati.native_.NativeCompiler"/>
+    </service>
+  </component>
+  <wire source="sca-interface/interfaces" target="sca-interface-native/interface-processor"/>
+  <component name="sca-interface-wsdl">
+    <implementation.java class="org.ow2.frascati.wsdl.ScaInterfaceWsdlProcessor"/>
+    <reference name="wsdl-compiler" target="wsdl-compiler/wsdl-compiler">
+      <interface.java interface="org.ow2.frascati.wsdl.WsdlCompiler"/>
+    </reference>
+    <service name="interface-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <component name="wsdl-compiler">
+    <implementation.java class="org.ow2.frascati.wsdl.WsdlCompilerCXF"/>
+    <property name="wsdl2java-options">-xjc-XtoString</property>
+    <property name="target-directory">generated-frascati-sources</property>
+    <service name="wsdl-compiler">
+      <interface.java interface="org.ow2.frascati.wsdl.WsdlCompiler"/>
+    </service>
+    <reference name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </reference>
+  </component>
+  <wire source="sca-interface/interfaces" target="sca-interface-wsdl/interface-processor"/>
+  <component name="sca-property-type-jaxb">
+    <implementation.java class="org.ow2.frascati.property.jaxb.ScaPropertyTypeJaxbProcessor"/>
+    <service name="property-type-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+  </component>
+  <wire source="sca-composite-property/property-types" target="sca-property-type-jaxb/property-type-processor"/>
+  <wire source="sca-component-property/property-types" target="sca-property-type-jaxb/property-type-processor"/>
+  <wire source="frascati-binding-http/composite-manager" target="assembly-factory/composite-manager"/>
+  <component name="sca-implementation-bpel">
+    <implementation.java class="org.ow2.frascati.implementation.bpel.FrascatiImplementationBpelProcessor"/>
+    <reference name="bpel-engine" target="bpel-engine/bpel-engine">
+      <interface.java interface="org.ow2.frascati.implementation.bpel.api.BPELEngine"/>
+    </reference>
+    <reference name="wsdl-compiler" target="wsdl-compiler/wsdl-compiler">
+      <interface.java interface="org.ow2.frascati.wsdl.WsdlCompiler"/>
+    </reference>
+    <service name="implementation-processor">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.assembly.factory.api.Processor"/>
+    </service>
+    <reference name="component-factory">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+  </component>
+  <component name="bpel-engine">
+    <implementation.java class="org.ow2.frascati.implementation.bpel.easybpel.EasyBpelEngine"/>
+    <property name="explorer">false</property>
+    <service name="bpel-engine">
+      <interface.java interface="org.ow2.frascati.implementation.bpel.api.BPELEngine"/>
+    </service>
+  </component>
+  <wire source="sca-implementation/implementations" target="sca-implementation-bpel/implementation-processor"/>
+</composite>

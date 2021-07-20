@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmi:id="_ExMPoGbNEeC6Udhue5_qHw" type="Sca" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_E4dVQGbNEeC6Udhue5_qHw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_E4d8UGbNEeC6Udhue5_qHw" type="5008"/>
+    <children xmi:type="notation:Node" xmi:id="_E4d8UWbNEeC6Udhue5_qHw" type="7001">
+      <children xmi:type="notation:Node" xmi:id="_E4fKcGbNEeC6Udhue5_qHw" type="3001">
+        <children xmi:type="notation:Node" xmi:id="_E4fxgGbNEeC6Udhue5_qHw" type="5001"/>
+        <children xmi:type="notation:Node" xmi:id="_E4fxgWbNEeC6Udhue5_qHw" type="7005">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4fxgmbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4fxg2bNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4gYkGbNEeC6Udhue5_qHw" type="7006">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4gYkWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4gYkmbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4fKcWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Service" href="org.ow2.frascati.parser.Parser.composite#//@composite/@service.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4fKcmbNEeC6Udhue5_qHw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4gYk2bNEeC6Udhue5_qHw" type="3001">
+        <children xmi:type="notation:Node" xmi:id="_E4gYlmbNEeC6Udhue5_qHw" type="5001"/>
+        <children xmi:type="notation:Node" xmi:id="_E4gYl2bNEeC6Udhue5_qHw" type="7005">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4gYmGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4gYmWbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4gYmmbNEeC6Udhue5_qHw" type="7006">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4gYm2bNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4gYnGbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4gYlGbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Service" href="org.ow2.frascati.parser.Parser.composite#//@composite/@service.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4gYlWbNEeC6Udhue5_qHw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4g_oGbNEeC6Udhue5_qHw" type="3001">
+        <children xmi:type="notation:Node" xmi:id="_E4g_o2bNEeC6Udhue5_qHw" type="5001"/>
+        <children xmi:type="notation:Node" xmi:id="_E4g_pGbNEeC6Udhue5_qHw" type="7005">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4g_pWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4g_pmbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4g_p2bNEeC6Udhue5_qHw" type="7006">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4g_qGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4g_qWbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4g_oWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Service" href="org.ow2.frascati.parser.Parser.composite#//@composite/@service.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4g_ombNEeC6Udhue5_qHw"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4g_qmbNEeC6Udhue5_qHw" type="3001">
+        <children xmi:type="notation:Node" xmi:id="_E4g_rWbNEeC6Udhue5_qHw" type="5001"/>
+        <children xmi:type="notation:Node" xmi:id="_E4hmsGbNEeC6Udhue5_qHw" type="7005">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4hmsWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4hmsmbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4hms2bNEeC6Udhue5_qHw" type="7006">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4hmtGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4hmtWbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4g_q2bNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Service" href="org.ow2.frascati.parser.Parser.composite#//@composite/@service.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4g_rGbNEeC6Udhue5_qHw"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_E4d8UmbNEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_E4d8U2bNEeC6Udhue5_qHw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_E4d8VGbNEeC6Udhue5_qHw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_E4d8VWbNEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_E4d8VmbNEeC6Udhue5_qHw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_E4d8V2bNEeC6Udhue5_qHw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_E4d8WGbNEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_E4d8WWbNEeC6Udhue5_qHw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_E4d8WmbNEeC6Udhue5_qHw" type="7004">
+      <children xmi:type="notation:Node" xmi:id="_E4qJkGbNEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_E4qJk2bNEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_E4qJlGbNEeC6Udhue5_qHw" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_E4vCEGbNEeC6Udhue5_qHw" type="3013">
+            <children xmi:type="notation:Node" xmi:id="_E4vCE2bNEeC6Udhue5_qHw" type="5004"/>
+            <children xmi:type="notation:Node" xmi:id="_E4vCFGbNEeC6Udhue5_qHw" type="7013">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E4vCFWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E4vCFmbNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E4vCF2bNEeC6Udhue5_qHw" type="7014">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E4vCGGbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E4vCGWbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E4vCEWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentService" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.0/@service.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4vCEmbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4qJlWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4qJlmbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4qJl2bNEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4qJmGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4qJmWbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4qJmmbNEeC6Udhue5_qHw" type="7011">
+          <children xmi:type="notation:Node" xmi:id="_E4zTgGbNEeC6Udhue5_qHw" type="3018">
+            <children xmi:type="notation:Node" xmi:id="_E4z6kGbNEeC6Udhue5_qHw" type="5005"/>
+            <children xmi:type="notation:Node" xmi:id="_E4z6kWbNEeC6Udhue5_qHw" type="7015">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E4z6kmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E4z6k2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E4z6lGbNEeC6Udhue5_qHw" type="7016">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E4z6lWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E4z6lmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E4zTgWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentReference" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.0/@reference.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4zTgmbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4qJm2bNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4qJnGbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4qwoGbNEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4qwoWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4qwombNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4qJkWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4qJkmbNEeC6Udhue5_qHw" x="46" y="2"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4qwo2bNEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_E4qwpmbNEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_E4qwp2bNEeC6Udhue5_qHw" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_E44MAGbNEeC6Udhue5_qHw" type="3013">
+            <children xmi:type="notation:Node" xmi:id="_E44zEGbNEeC6Udhue5_qHw" type="5004"/>
+            <children xmi:type="notation:Node" xmi:id="_E44zEWbNEeC6Udhue5_qHw" type="7013">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E44zEmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E44zE2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E44zFGbNEeC6Udhue5_qHw" type="7014">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E44zFWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E44zFmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E44MAWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentService" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.1/@service.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E44MAmbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4qwqGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4qwqWbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4rXsGbNEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4rXsWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4rXsmbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4rXs2bNEeC6Udhue5_qHw" type="7011">
+          <children xmi:type="notation:Node" xmi:id="_E472YGbNEeC6Udhue5_qHw" type="3018">
+            <children xmi:type="notation:Node" xmi:id="_E48dcGbNEeC6Udhue5_qHw" type="5005"/>
+            <children xmi:type="notation:Node" xmi:id="_E48dcWbNEeC6Udhue5_qHw" type="7015">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E48dcmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E48dc2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E48ddGbNEeC6Udhue5_qHw" type="7016">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E48ddWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E48ddmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E472YWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentReference" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.1/@reference.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E472YmbNEeC6Udhue5_qHw"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_E48dd2bNEeC6Udhue5_qHw" type="3018">
+            <children xmi:type="notation:Node" xmi:id="_E49EgGbNEeC6Udhue5_qHw" type="5005"/>
+            <children xmi:type="notation:Node" xmi:id="_E49EgWbNEeC6Udhue5_qHw" type="7015">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E49EgmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E49Eg2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E49EhGbNEeC6Udhue5_qHw" type="7016">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E49EhWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E49EhmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E48deGbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentReference" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.1/@reference.1"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E48deWbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4rXtGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4rXtWbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4rXtmbNEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4rXt2bNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4rXuGbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4qwpGbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4qwpWbNEeC6Udhue5_qHw" x="46" y="133" height="169"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4rXuWbNEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_E4rXvGbNEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_E4rXvWbNEeC6Udhue5_qHw" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_E5B9AGbNEeC6Udhue5_qHw" type="3013">
+            <children xmi:type="notation:Node" xmi:id="_E5CkEGbNEeC6Udhue5_qHw" type="5004"/>
+            <children xmi:type="notation:Node" xmi:id="_E5CkEWbNEeC6Udhue5_qHw" type="7013">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5CkEmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5CkE2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E5CkFGbNEeC6Udhue5_qHw" type="7014">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5CkFWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5DLIGbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E5B9AWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentService" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.2/@service.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E5B9AmbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4rXvmbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4r-wGbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4r-wWbNEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4r-wmbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4r-w2bNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4r-xGbNEeC6Udhue5_qHw" type="7011">
+          <children xmi:type="notation:Node" xmi:id="_E5IDoGbNEeC6Udhue5_qHw" type="3018">
+            <children xmi:type="notation:Node" xmi:id="_E5IDo2bNEeC6Udhue5_qHw" type="5005"/>
+            <children xmi:type="notation:Node" xmi:id="_E5IDpGbNEeC6Udhue5_qHw" type="7015">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5IDpWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5IDpmbNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E5IqsGbNEeC6Udhue5_qHw" type="7016">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5IqsWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5IqsmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E5IDoWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentReference" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.2/@reference.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E5IDombNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4r-xWbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4r-xmbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4r-x2bNEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4r-yGbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4r-yWbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4rXumbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4rXu2bNEeC6Udhue5_qHw" x="46" y="293"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4r-ymbNEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_E4r-zWbNEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_E4r-zmbNEeC6Udhue5_qHw" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_E5LuAGbNEeC6Udhue5_qHw" type="3013">
+            <children xmi:type="notation:Node" xmi:id="_E5MVEGbNEeC6Udhue5_qHw" type="5004"/>
+            <children xmi:type="notation:Node" xmi:id="_E5MVEWbNEeC6Udhue5_qHw" type="7013">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5MVEmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5MVE2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E5MVFGbNEeC6Udhue5_qHw" type="7014">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5MVFWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5MVFmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E5LuAWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentService" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.3/@service.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E5LuAmbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4r-z2bNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4r-0GbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4sl0GbNEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4sl0WbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4sl0mbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4sl02bNEeC6Udhue5_qHw" type="7011">
+          <children xmi:type="notation:Node" xmi:id="_E5WtIGbNEeC6Udhue5_qHw" type="3018">
+            <children xmi:type="notation:Node" xmi:id="_E5XUMGbNEeC6Udhue5_qHw" type="5005"/>
+            <children xmi:type="notation:Node" xmi:id="_E5XUMWbNEeC6Udhue5_qHw" type="7015">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5XUMmbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5XUM2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E5XUNGbNEeC6Udhue5_qHw" type="7016">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5XUNWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5XUNmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E5WtIWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentReference" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.3/@reference.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E5WtImbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4sl1GbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4sl1WbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4sl1mbNEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4sl12bNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4sl2GbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4r-y2bNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4r-zGbNEeC6Udhue5_qHw" x="46" y="433"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_E4sl2WbNEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_E4sl3GbNEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_E4sl3WbNEeC6Udhue5_qHw" type="7009">
+          <children xmi:type="notation:Node" xmi:id="_E5a-kGbNEeC6Udhue5_qHw" type="3013">
+            <children xmi:type="notation:Node" xmi:id="_E5bloGbNEeC6Udhue5_qHw" type="5004"/>
+            <children xmi:type="notation:Node" xmi:id="_E5bloWbNEeC6Udhue5_qHw" type="7013">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5blombNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5blo2bNEeC6Udhue5_qHw"/>
+            </children>
+            <children xmi:type="notation:Node" xmi:id="_E5blpGbNEeC6Udhue5_qHw" type="7014">
+              <styles xmi:type="notation:SortingStyle" xmi:id="_E5blpWbNEeC6Udhue5_qHw"/>
+              <styles xmi:type="notation:FilteringStyle" xmi:id="_E5blpmbNEeC6Udhue5_qHw"/>
+            </children>
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_E5a-kWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+            <element xmi:type="sca:ComponentService" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.4/@service.0"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E5a-kmbNEeC6Udhue5_qHw"/>
+          </children>
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4sl3mbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4sl32bNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4tM4GbNEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4tM4WbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4tM4mbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4tM42bNEeC6Udhue5_qHw" type="7011">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4tM5GbNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4tM5WbNEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_E4tM5mbNEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_E4tM52bNEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_E4tM6GbNEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_E4sl2mbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.parser.Parser.composite#//@composite/@component.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4sl22bNEeC6Udhue5_qHw" x="286" y="7"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_E4d8W2bNEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_E4d8XGbNEeC6Udhue5_qHw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_E4dVQWbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xmi:type="sca:Composite" href="org.ow2.frascati.parser.Parser.composite#//@composite"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_E4dVQmbNEeC6Udhue5_qHw" width="553" height="653"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_ExMPoWbNEeC6Udhue5_qHw"/>
+  <element xmi:type="sca:DocumentRoot" href="org.ow2.frascati.parser.Parser.composite#/"/>
+  <edges xmi:type="notation:Edge" xmi:id="_E5pBAGbNEeC6Udhue5_qHw" type="4002" source="_E4fKcGbNEeC6Udhue5_qHw" target="_E4vCEGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5pBAWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5pBAmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5pBA2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E5rdQGbNEeC6Udhue5_qHw" type="4002" source="_E4gYk2bNEeC6Udhue5_qHw" target="_E44MAGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5rdQWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5rdQmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5rdQ2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E5t5gGbNEeC6Udhue5_qHw" type="4002" source="_E4g_oGbNEeC6Udhue5_qHw" target="_E5B9AGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5t5gWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5t5gmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5t5g2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E5vHoGbNEeC6Udhue5_qHw" type="4002" source="_E4g_qmbNEeC6Udhue5_qHw" target="_E5LuAGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5vHoWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5vHombNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5vHo2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E5vusGbNEeC6Udhue5_qHw" type="4004" source="_E4zTgGbNEeC6Udhue5_qHw" target="_E5a-kGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5vusWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5vusmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5vus2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E5yyAGbNEeC6Udhue5_qHw" type="4004" source="_E472YGbNEeC6Udhue5_qHw" target="_E5a-kGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5yyAWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5yyAmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5yyA2bNEeC6Udhue5_qHw" points="[0, 0, -96, 244]$[47, 0, -49, 244]$[47, -244, -49, 0]$[96, -244, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E5zZEGbNEeC6Udhue5_qHw" type="4004" source="_E48dd2bNEeC6Udhue5_qHw" target="_E5B9AGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E5zZEWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E5zZEmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E5zZE2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E50AIGbNEeC6Udhue5_qHw" type="4004" source="_E5IDoGbNEeC6Udhue5_qHw" target="_E5a-kGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E50AIWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E50AImbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E50AI2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+  <edges xmi:type="notation:Edge" xmi:id="_E51OQGbNEeC6Udhue5_qHw" type="4004" source="_E5WtIGbNEeC6Udhue5_qHw" target="_E5a-kGbNEeC6Udhue5_qHw">
+    <styles xmi:type="notation:RoutingStyle" xmi:id="_E51OQWbNEeC6Udhue5_qHw" routing="Rectilinear" smoothness="Normal"/>
+    <styles xmi:type="notation:FontStyle" xmi:id="_E51OQmbNEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xsi:nil="true"/>
+    <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_E51OQ2bNEeC6Udhue5_qHw" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
+  </edges>
+</notation:Diagram>

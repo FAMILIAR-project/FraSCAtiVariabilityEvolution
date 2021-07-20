@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" name="org.ow2.frascati.binding.factory.BindingFactory">
+  <service name="binding-factory" promote="BindingFactory/binding-factory">
+    <interface.java interface="org.objectweb.fractal.bf.BindingFactory"/>
+  </service>
+  <component name="BindingFactory">
+    <implementation.java class="org.ow2.frascati.binding.factory.BindingFactorySCAImpl"/>
+    <service name="binding-factory">
+      <interface.java interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </service>
+    <reference name="plugin-resolver" target="PluginResolver/plugin-resolver">
+      <interface.java interface="org.objectweb.fractal.bf.PluginResolver"/>
+    </reference>
+  </component>
+  <component name="PluginResolver">
+    <implementation.java class="org.ow2.frascati.binding.factory.PluginResolverSCAImpl"/>
+    <service name="plugin-resolver">
+      <interface.java interface="org.objectweb.fractal.bf.PluginResolver"/>
+    </service>
+    <reference multiplicity="0..n" name="plugins" autowire="true">
+      <interface.java interface="org.objectweb.fractal.bf.BindingFactoryPlugin"/>
+    </reference>
+  </component>
+</composite>

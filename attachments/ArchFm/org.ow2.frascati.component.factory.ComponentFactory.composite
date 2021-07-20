@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:cf="org/ow2/frascati/component/factory" xmlns:juliac="org/ow2/frascati/component/factory/juliac" name="org.ow2.frascati.component.factory.ComponentFactory">
+  <component name="tinfi-oo">
+    <implementation.java class="org.ow2.frascati.component.factory.impl.MembraneProviderImpl"/>
+    <property name="membrane-description">OW2 FraSCAti Tinfi Object-Oriented Membranes</property>
+    <property name="membrane-names">scaPrimitive:scaComposite:scaContainer</property>
+    <property name="membrane-class">org.objectweb.fractal.juliac.runtime.Juliac</property>
+    <service name="fractal-bootstrap-class-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </service>
+  </component>
+  <component name="factory">
+    <implementation.java class="org.ow2.frascati.component.factory.impl.ComponentFactoryImpl"/>
+    <property name="sca-primitive-membrane">scaPrimitive</property>
+    <property name="sca-composite-membrane">scaComposite</property>
+    <service name="component-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </service>
+    <service name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </service>
+    <service name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </service>
+    <reference multiplicity="0..n" name="fractal-bootstrap-class-providers" autowire="true">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </reference>
+    <reference multiplicity="0..1" name="delegate-membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </reference>
+  </component>
+  <service name="component-factory" promote="factory/component-factory">
+    <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+  </service>
+  <service name="type-factory" promote="factory/type-factory">
+    <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+  </service>
+  <service name="membrane-generation" promote="factory/membrane-generation">
+    <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+  </service>
+  <component name="juliac">
+    <implementation.composite name="juliac:Juliac.composite"/>
+    <service name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </service>
+  </component>
+  <wire source="factory/delegate-membrane-generation" target="juliac/membrane-generation"/>
+  <component name="julia">
+    <implementation.java class="org.ow2.frascati.component.factory.impl.MembraneProviderImpl"/>
+    <property name="membrane-description">OW2 Fractal Julia Membranes</property>
+    <property name="membrane-names">primitive:composite</property>
+    <property name="membrane-class">org.objectweb.fractal.julia.Julia</property>
+    <service name="fractal-bootstrap-class-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </service>
+  </component>
+  <component name="osgi-provider">
+    <implementation.java class="org.ow2.frascati.component.factory.impl.MembraneProviderImpl"/>
+    <property name="membrane-description">OW2 FraSCAti Tinfi OSGi Membranes</property>
+    <property name="membrane-names">osgiPrimitive</property>
+    <property name="membrane-class">org.objectweb.fractal.juliac.osgi.JuliacOSGi</property>
+    <service name="fractal-bootstrap-class-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </service>
+  </component>
+  <wire source="factory/fractal-bootstrap-class-providers" target="tinfi-oo/fractal-bootstrap-class-provider"/>
+  <wire source="factory/fractal-bootstrap-class-providers" target="julia/fractal-bootstrap-class-provider"/>
+  <wire source="factory/fractal-bootstrap-class-providers" target="osgi-provider/fractal-bootstrap-class-provider"/>
+</composite>

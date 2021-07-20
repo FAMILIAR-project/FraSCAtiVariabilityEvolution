@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmi:id="_N-yjQGavEeCb3cFxNI3oCg" type="Sca" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_23LrgGbPEeC6Udhue5_qHw" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_23MSkGbPEeC6Udhue5_qHw" type="5008"/>
+    <children xmi:type="notation:Node" xmi:id="_23MSkWbPEeC6Udhue5_qHw" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_23MSkmbPEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_23MSk2bPEeC6Udhue5_qHw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_23MSlGbPEeC6Udhue5_qHw" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_23MSlWbPEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_23MSlmbPEeC6Udhue5_qHw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_23MSl2bPEeC6Udhue5_qHw" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_23MSmGbPEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_23MSmWbPEeC6Udhue5_qHw"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_23MSmmbPEeC6Udhue5_qHw" type="7004">
+      <children xmi:type="notation:Node" xmi:id="_23P88GbPEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_23P882bPEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_23P89GbPEeC6Udhue5_qHw" type="7009">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23P89WbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23P89mbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23P892bPEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23P8-GbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23P8-WbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23P8-mbPEeC6Udhue5_qHw" type="7011">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23P8-2bPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23P8_GbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23QkAGbPEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23QkAWbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23QkAmbPEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_23P88WbPEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#//@composite/@component.0"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23P88mbPEeC6Udhue5_qHw" x="266" y="467"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_23QkA2bPEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_23QkBmbPEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_23QkB2bPEeC6Udhue5_qHw" type="7009">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23QkCGbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23QkCWbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23QkCmbPEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23QkC2bPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23QkDGbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23QkDWbPEeC6Udhue5_qHw" type="7011">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23QkDmbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23QkD2bPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23QkEGbPEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23QkEWbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23QkEmbPEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_23QkBGbPEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#//@composite/@component.1"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23QkBWbPEeC6Udhue5_qHw" x="34" y="34" height="193"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_23QkE2bPEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_23RLEGbPEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_23RLEWbPEeC6Udhue5_qHw" type="7009">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RLEmbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RLE2bPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RLFGbPEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RLFWbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RLFmbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RLF2bPEeC6Udhue5_qHw" type="7011">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RLGGbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RLGWbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RLGmbPEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RLG2bPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RLHGbPEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_23QkFGbPEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#//@composite/@component.2"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23QkFWbPEeC6Udhue5_qHw" x="370" y="178"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_23RLHWbPEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_23RLIGbPEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_23RLIWbPEeC6Udhue5_qHw" type="7009">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RLImbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RLI2bPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RyIGbPEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RyIWbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RyImbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RyI2bPEeC6Udhue5_qHw" type="7011">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RyJGbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RyJWbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RyJmbPEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RyJ2bPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RyKGbPEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_23RLHmbPEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#//@composite/@component.3"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23RLH2bPEeC6Udhue5_qHw" x="370" y="34"/>
+      </children>
+      <children xmi:type="notation:Node" xmi:id="_23RyKWbPEeC6Udhue5_qHw" type="3012">
+        <children xmi:type="notation:Node" xmi:id="_23RyLGbPEeC6Udhue5_qHw" type="5007"/>
+        <children xmi:type="notation:Node" xmi:id="_23RyLWbPEeC6Udhue5_qHw" type="7009">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23RyLmbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23RyL2bPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23RyMGbPEeC6Udhue5_qHw" type="7010">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23SZMGbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23SZMWbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23SZMmbPEeC6Udhue5_qHw" type="7011">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23SZM2bPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23SZNGbPEeC6Udhue5_qHw"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_23SZNWbPEeC6Udhue5_qHw" type="7012">
+          <styles xmi:type="notation:SortingStyle" xmi:id="_23SZNmbPEeC6Udhue5_qHw"/>
+          <styles xmi:type="notation:FilteringStyle" xmi:id="_23SZN2bPEeC6Udhue5_qHw"/>
+        </children>
+        <styles xmi:type="notation:ShapeStyle" xmi:id="_23RyKmbPEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+        <element xmi:type="sca:Component" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#//@composite/@component.4"/>
+        <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23RyK2bPEeC6Udhue5_qHw" x="270" y="326"/>
+      </children>
+      <styles xmi:type="notation:SortingStyle" xmi:id="_23MSm2bPEeC6Udhue5_qHw"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_23MSnGbPEeC6Udhue5_qHw"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_23LrgWbPEeC6Udhue5_qHw" fontName="Lucida Grande"/>
+    <element xmi:type="sca:Composite" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#//@composite"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_23LrgmbPEeC6Udhue5_qHw" width="689" height="673"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_N-yjQWavEeCb3cFxNI3oCg"/>
+  <element xmi:type="sca:DocumentRoot" href="org.ow2.frascati.component.factory.juliac.Juliac.composite#/"/>
+</notation:Diagram>

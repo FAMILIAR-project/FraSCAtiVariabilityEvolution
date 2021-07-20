@@ -1,0 +1,31 @@
+fmArch150 = FM ( Arch : Ar1 Ar2; Ar1: (Ar3|Ar4); Ar2 : (Ar5|Ar6); )
+fmPlugin = FM ( Plugin : (Pl1|Pl2|Pl3)+ ; Pl1 -> Pl2 ; )
+fmFull = aggregate { fmArch150 fmPlugin } withMapping constraints (Ar3 -> Pl1 ; Pl2 -> Ar5; )
+fmArch = slice fmFull including fmArch150.* // // enforced architectural FM
+
+// let us play with the models...
+sArch = configs fmArch
+nArch = counting fmArch
+
+// we know by construction that fmArch either a refactoring or a specialization of fmArch150
+cmp = compare fmArch150 fmArch
+//assert (cmp eq REFACTORING || cmp eq SPECIALIZATION)
+
+// or, equivalently, that the difference (or complement) bewteen the set of configurations of 
+// fmArch and fmArch150 is empty
+dArch = merge diff { fmArch fmArch150 }
+assert (not (isValid dArch))
+
+// we now compute the difference bewteen the set of configurations of fmArch150 and fmArch
+// fmArch150Removal is an FM that compactly represents this difference
+fmArch150Removal = merge diff { fmArch150 fmArch }
+if (compare fmArch fmArch150 eq SPECIALIZATION) then
+   	    println "configurations removed from fmArch150=" 
+   	    smissing = configs fmArch150Removal
+   	    foreach (s in smissing) do
+   	    	println s
+   	    end
+else
+	// refactoring
+    println "configurations of fmArch150 have not been modified"
+end

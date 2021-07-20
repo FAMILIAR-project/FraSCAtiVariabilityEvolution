@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.osoa.org/xmlns/sca/1.0" name="org.ow2.frascati.component.factory.juliac.Juliac">
+  <component name="jdt-compiler">
+    <implementation.java class="org.ow2.frascati.component.factory.juliac.impl.JuliacCompilerProviderImpl"/>
+    <service name="compiler-provider">
+      <interface.java interface="org.ow2.frascati.component.factory.juliac.api.JuliacCompilerProvider"/>
+    </service>
+    <property name="juliac-compiler">JDT</property>
+  </component>
+  <component name="juliac">
+    <implementation.java class="org.ow2.frascati.component.factory.juliac.impl.JuliacComponent"/>
+    <property name="FRASCATI-GENERATED">FRASCATI_GENERATED</property>
+    <property name="MAVEN-TARGET-DIRECTORY">target</property>
+    <property name="GEN-DIRECTORY">/generated-frascati-sources</property>
+    <property name="CLASS-DIRECTORY">/generated-frascati-classes</property>
+    <service name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </service>
+    <reference multiplicity="0..n" name="generators" autowire="true">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </reference>
+    <reference multiplicity="0..1" name="compiler-provider" autowire="true">
+      <interface.java interface="org.ow2.frascati.component.factory.juliac.api.JuliacCompilerProvider"/>
+    </reference>
+  </component>
+  <service name="membrane-generation" promote="juliac/membrane-generation">
+    <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+  </service>
+  <component name="tinfi-oo">
+    <implementation.java class="org.ow2.frascati.component.factory.impl.MembraneProviderImpl"/>
+    <property name="membrane-description">OW2 FraSCAti Tinfi Object-Oriented Membranes Juliac Generator</property>
+    <property name="membrane-names">scaPrimitive:scaComposite:scaContainer</property>
+    <property name="membrane-class">org.ow2.frascati.tinfi.opt.oo.FCOOCtrlSourceCodeGenerator</property>
+    <service name="juliac-generator-class-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </service>
+  </component>
+  <component name="osgi">
+    <implementation.java class="org.ow2.frascati.component.factory.impl.MembraneProviderImpl"/>
+    <property name="membrane-description">OW2 FraSCAti Tinfi OSGi Membranes Generator</property>
+    <property name="membrane-names">osgiPrimitive</property>
+    <property name="membrane-class">org.objectweb.fractal.juliac.osgi.FCOOCtrlSourceCodeGenerator</property>
+    <service name="juliac-generator-class-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.component.factory.api.MembraneProvider"/>
+    </service>
+  </component>
+  <component name="jdk6-compiler">
+    <implementation.java class="org.ow2.frascati.component.factory.juliac.impl.JuliacCompilerProviderImpl"/>
+    <service name="juliac-compiler">
+      <interface.java interface="org.ow2.frascati.component.factory.juliac.api.JuliacCompilerProvider"/>
+    </service>
+    <property name="juliac-compiler">JDK6</property>
+  </component>
+  <wire source="juliac/generators" target="osgi/juliac-generator-class-provider"/>
+  <wire source="juliac/generators" target="tinfi-oo/juliac-generator-class-provider"/>
+  <wire source="juliac/compiler-provider" target="jdk6-compiler/juliac-compiler"/>
+</composite>

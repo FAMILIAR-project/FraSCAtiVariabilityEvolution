@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.osoa.org/xmlns/sca/1.0" name="org.ow2.frascati.parser.ScaParser">
+  <service name="sca-parser" promote="sca-parser/sca-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </service>
+  <component name="sca-parser">
+    <implementation.java class="org.ow2.frascati.parser.core.ScaParser"/>
+    <service name="sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <reference multiplicity="0..n" name="metamodels" autowire="true">
+      <interface.java interface="org.ow2.frascati.parser.api.MetamodelProvider"/>
+    </reference>
+  </component>
+  <component name="sca-metamodel">
+    <implementation.java class="org.ow2.frascati.parser.metamodel.ScaMetamodelProvider"/>
+    <service name="metamodel-provider">
+      <interface.java interface="org.ow2.frascati.parser.api.MetamodelProvider"/>
+    </service>
+  </component>
+  <wire source="sca-parser/metamodels" target="sca-metamodel/metamodel-provider"/>
+  <component name="sca-metamodel-tuscany">
+    <implementation.java class="org.ow2.frascati.metamodel.tuscany.TuscanyMetamodelProvider"/>
+    <service name="metamodel-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.parser.api.MetamodelProvider"/>
+    </service>
+  </component>
+  <component name="sca-metamodel-frascati">
+    <implementation.java class="org.ow2.frascati.metamodel.frascati.FrascatiMetamodelProvider"/>
+    <service name="metamodel-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.parser.api.MetamodelProvider"/>
+    </service>
+  </component>
+  <component name="sca-metamodel-native">
+    <implementation.java class="org.ow2.frascati.native_.parser.NativeMetamodelProvider"/>
+    <service name="metamodel-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.parser.api.MetamodelProvider"/>
+    </service>
+  </component>
+  <component name="sca-metamodel-upnp">
+    <implementation.java class="org.ow2.frascati.upnp.parser.UPnPMetamodelProvider"/>
+    <service name="metamodel-provider">
+      <interface xsi:type="interface.java" interface="org.ow2.frascati.parser.api.MetamodelProvider"/>
+    </service>
+  </component>
+  <wire source="sca-parser/metamodels" target="sca-metamodel-upnp/metamodel-provider"/>
+  <wire source="sca-parser/metamodels" target="sca-metamodel-frascati/metamodel-provider"/>
+  <wire source="sca-parser/metamodels" target="sca-metamodel-native/metamodel-provider"/>
+  <wire source="sca-parser/metamodels" target="sca-metamodel-tuscany/metamodel-provider"/>
+</composite>

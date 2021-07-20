@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:parser="org/ow2/frascati/parser" name="org.ow2.frascati.parser.Parser">
+  <service name="component-type-parser" promote="component-type-parser/component-type-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </service>
+  <service name="composite-parser" promote="composite-parser/composite-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </service>
+  <service name="constraining-type-parser" promote="constraining-type-parser/constraining-type-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </service>
+  <service name="contribution-parser" promote="contribution-parser/contribution-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </service>
+  <component name="component-type-parser">
+    <implementation.java class="org.ow2.frascati.parser.core.ScaComponentTypeParser"/>
+    <service name="component-type-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <reference name="sca-parser" target="sca-parser/sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <property name="file-extension">.componentType</property>
+  </component>
+  <component name="composite-parser">
+    <implementation.composite name="parser:CompositeParser.composite"/>
+    <service name="composite-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <reference name="sca-parser" target="sca-parser/sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="constraining-type-parser" target="constraining-type-parser/constraining-type-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+  </component>
+  <component name="constraining-type-parser">
+    <implementation.java class="org.ow2.frascati.parser.core.ScaConstrainingTypeParser"/>
+    <service name="constraining-type-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <reference name="sca-parser" target="sca-parser/sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <property name="file-extension">.constrainingType</property>
+  </component>
+  <component name="contribution-parser">
+    <implementation.java class="org.ow2.frascati.parser.core.ScaContributionParser"/>
+    <service name="contribution-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <reference name="sca-parser" target="sca-parser/sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <property name="file-extension">.xml</property>
+  </component>
+  <component name="sca-parser">
+    <implementation.composite name="parser:ScaParser.composite"/>
+    <service name="sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+  </component>
+</composite>

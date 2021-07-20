@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.osoa.org/xmlns/sca/1.0" xmlns:af="org/ow2/frascati/assembly/factory" xmlns:bf="org/ow2/frascati/binding/factory" xmlns:cf="org/ow2/frascati/component/factory" xmlns:fns="org/ow2/frascati" xmlns:parser="org/ow2/frascati/parser" name="org.ow2.frascati.FraSCAti">
+  <service name="composite-manager" promote="assembly-factory/composite-manager">
+    <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+  </service>
+  <service name="classloader-manager" promote="assembly-factory/classloader-manager">
+    <interface.java interface="org.ow2.frascati.assembly.factory.api.ClassLoaderManager"/>
+  </service>
+  <service name="membrane-generation" promote="component-factory/membrane-generation">
+    <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+  </service>
+  <component name="assembly-factory">
+    <implementation.composite name="af:AssemblyFactory.composite"/>
+    <service name="composite-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.CompositeManager"/>
+    </service>
+    <service name="classloader-manager">
+      <interface.java interface="org.ow2.frascati.assembly.factory.api.ClassLoaderManager"/>
+    </service>
+    <reference name="composite-parser" target="sca-parser/composite-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="contribution-parser" target="sca-parser/contribution-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="membrane-generation" target="component-factory/membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </reference>
+    <reference name="component-factory" target="component-factory/component-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </reference>
+    <reference name="type-factory" target="component-factory/type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </reference>
+    <reference name="binding-factory">
+      <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </reference>
+  </component>
+  <component name="sca-parser">
+    <implementation.composite name="parser:Parser.composite"/>
+    <service name="composite-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <service name="constraining-type-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <service name="component-type-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <service name="contribution-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+  </component>
+  <component name="component-factory">
+    <implementation.composite name="cf:ComponentFactory.composite"/>
+    <service name="membrane-generation">
+      <interface.java interface="org.ow2.frascati.component.factory.api.MembraneGeneration"/>
+    </service>
+    <service name="component-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.ComponentFactory"/>
+    </service>
+    <service name="type-factory">
+      <interface.java interface="org.ow2.frascati.component.factory.api.TypeFactory"/>
+    </service>
+  </component>
+  <component name="services">
+    <implementation.composite name="fns:Services.composite"/>
+  </component>
+  <component name="binding-factory">
+    <implementation.composite name="bf:BindingFactory.composite"/>
+    <service name="binding-factory">
+      <interface.java interface="org.objectweb.fractal.bf.BindingFactory"/>
+    </service>
+  </component>
+  <service name="binding-factory" promote="binding-factory/binding-factory">
+    <interface xsi:type="interface.java" interface="org.objectweb.fractal.bf.BindingFactory"/>
+  </service>
+  <wire source="assembly-factory/binding-factory" target="binding-factory/binding-factory"/>
+</composite>

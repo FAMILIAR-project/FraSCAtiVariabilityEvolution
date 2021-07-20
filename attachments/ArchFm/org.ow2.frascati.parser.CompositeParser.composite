@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0" name="org.ow2.frascati.parser.CompositeParser">
+  <service name="composite-parser" promote="composite-parser/composite-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </service>
+  <reference name="sca-parser" promote="composite-parser/sca-parser sca-include-resolver/sca-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </reference>
+  <reference name="constraining-type-parser" promote="sca-constraining-type-resolver/constraining-type-parser">
+    <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+  </reference>
+  <component name="composite-parser">
+    <implementation.java class="org.ow2.frascati.parser.core.ScaCompositeParser"/>
+    <service name="composite-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </service>
+    <reference name="sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference multiplicity="0..n" name="resolvers">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+    <property name="file-extension">.composite</property>
+  </component>
+  <wire source="composite-parser/resolvers" target="sca-include-resolver/composite-resolver"/>
+  <component name="sca-include-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.IncludeResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="sca-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="next-resolver" target="sca-constraining-type-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+    <property name="file-extension">.composite</property>
+  </component>
+  <component name="sca-constraining-type-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.ConstrainingTypeResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="constraining-type-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="next-resolver" target="sca-implementation-composite-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-implementation-composite-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.ImplementationCompositeResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="composite-parser" target="composite-parser/composite-parser">
+      <interface.java interface="org.ow2.frascati.parser.api.Parser"/>
+    </reference>
+    <reference name="next-resolver" target="sca-java-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-java-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.JavaResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-java-interface-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-java-interface-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.JavaInterfaceResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-callback-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-callback-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.CallbackInterfaceResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-component-reference-target-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-component-reference-target-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.ComponentReferenceTargetResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-promote-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-promote-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.PromoteResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-composite-interface-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-composite-interface-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.CompositeInterfaceResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-authentication-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-authentication-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.AuthenticationResolver"/>
+    <property name="authentication-intent-name">auth-intent</property>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+    <reference name="next-resolver" target="sca-autowire-resolver/composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </reference>
+  </component>
+  <component name="sca-autowire-resolver">
+    <implementation.java class="org.ow2.frascati.parser.resolver.AutowireResolver"/>
+    <service name="composite-resolver">
+      <interface.java interface="org.ow2.frascati.parser.api.Resolver"/>
+    </service>
+  </component>
+</composite>

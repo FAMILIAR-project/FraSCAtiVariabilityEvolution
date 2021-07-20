@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<notation:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmi:id="_WB-9oGavEeCb3cFxNI3oCg" type="Sca" measurementUnit="Pixel">
+  <children xmi:type="notation:Node" xmi:id="_WH-38GavEeCb3cFxNI3oCg" type="2001">
+    <children xmi:type="notation:Node" xmi:id="_WH-382avEeCb3cFxNI3oCg" type="5008"/>
+    <children xmi:type="notation:Node" xmi:id="_WH-39GavEeCb3cFxNI3oCg" type="7001">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WH-39WavEeCb3cFxNI3oCg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WH-39mavEeCb3cFxNI3oCg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WH-392avEeCb3cFxNI3oCg" type="7002">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WH-3-GavEeCb3cFxNI3oCg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WH-3-WavEeCb3cFxNI3oCg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WH-3-mavEeCb3cFxNI3oCg" type="7003">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WH-3-2avEeCb3cFxNI3oCg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WH-3_GavEeCb3cFxNI3oCg"/>
+    </children>
+    <children xmi:type="notation:Node" xmi:id="_WH-3_WavEeCb3cFxNI3oCg" type="7004">
+      <styles xmi:type="notation:SortingStyle" xmi:id="_WH-3_mavEeCb3cFxNI3oCg"/>
+      <styles xmi:type="notation:FilteringStyle" xmi:id="_WH-3_2avEeCb3cFxNI3oCg"/>
+    </children>
+    <styles xmi:type="notation:ShapeStyle" xmi:id="_WH-38WavEeCb3cFxNI3oCg" fontName="Lucida Grande"/>
+    <element xmi:type="sca:Composite" href="org.ow2.frascati.Services.composite#//@composite"/>
+    <layoutConstraint xmi:type="notation:Bounds" xmi:id="_WH-38mavEeCb3cFxNI3oCg" width="209" height="153"/>
+  </children>
+  <styles xmi:type="notation:DiagramStyle" xmi:id="_WB-9oWavEeCb3cFxNI3oCg"/>
+  <element xmi:type="sca:DocumentRoot" href="org.ow2.frascati.Services.composite#/"/>
+</notation:Diagram>
