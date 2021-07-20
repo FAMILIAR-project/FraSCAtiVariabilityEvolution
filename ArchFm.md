@@ -44,19 +44,19 @@ You can download the .composite and .composite_diagram files below. Note that th
 <img src="attachments/ArchFm/org.ow2.frascati.parser.CompositeParser.png" width="40%" />
 
  #### metamodels supported by the FraSCAti SCA parser 
-<img src="attachments/ArchFm/org.ow2.frascati.parser.ScaParser.png />
+<img src="attachments/ArchFm/org.ow2.frascati.parser.ScaParser.png" />
 
  #### membranes 
-<img src="attachments/ArchFm/org.ow2.frascati.component.factory.ComponentFactory.png />
+<img src="attachments/ArchFm/org.ow2.frascati.component.factory.ComponentFactory.png" />
 
  #### Java compilers and membrane generators 
-<img src="attachments/ArchFm/org.ow2.frascati.component.factory.juliac.Juliac.png />
+<img src="attachments/ArchFm/org.ow2.frascati.component.factory.juliac.Juliac.png" />
 
  #### binding factory 
 <img src="attachments/ArchFm/org.ow2.frascati.binding.factory.BindingFactory.png" />
 
  #### services (empty composite at the moment) 
-<img src="attachments/ArchFm/org.ow2.frascati.Services.png width="10%" />
+<img src="attachments/ArchFm/org.ow2.frascati.Services.png" width="10%" />
 
 
 
