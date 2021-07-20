@@ -1,12 +1,14 @@
-= Reverse Engineering Architectural Feature Models = 
+# Reverse Engineering Architectural Feature Models 
+
+note: the content was originally written in 2011
 
 The following web page provides material, details and results of the experiments we conduct in reverse engineering an architectural feature model of the [http://frascati.ow2.org FraSCAti project]. The web page is related to a paper submitted to [http://www.ecsa2011.org/ ECSA 2011 conference], entitled "Reverse Engineering Architectural Feature Models", co-authored by [http://www.i3s.unice.fr/~acher Mathieu Acher], [http://www.fundp.ac.be/universite/personnes/page_view/01005760/ Anthony Cleve], [http://www.i3s.unice.fr/~collet Philippe Collet], [http://www.lifl.fr/~merle Philippe Merle], [http://www.lifl.fr/~duchien/Laurence/index.html Laurence Duchien] and [http://www.i3s.unice.fr/~lahire Philippe Lahire]
 
 '''NEW''' The paper has been accepted!
 
-== Reverse Engineering FraSCAti Architectural Feature Model ==  
+## Reverse Engineering FraSCAti Architectural Feature Model 
 
- === FraSCAti === 
+### FraSCAti 
 
 Started three years ago, the development of the FraSCAti platform begun with a framework, first validated by a basic implementation of the standard, and then incrementally enhanced.
 After four major releases, it now supports several SCA specifications (Assembly Model, Transaction Policy, Java Common Annotations and APIs, Java Component Implementation, Spring Component Implementation, BPEL Client and Implementation, Web Services Binding, JMS Binding), and provides a set of extensions to the standard, 
@@ -19,7 +21,7 @@ For example, some variations consist in one or more specific components bound to
 It then became obvious to FraSCAti technical leads that the variability (i.e., "the ability of a software system or artefact to be efficiently extended, changed, customized or configured for use in a particular context.") of the platform should be managed to pilot and control its evolution as a ''Software Product Line (SPL)''.
 
 
- ==== FraSCAti Artefacts ====
+### FraSCAti Artefacts 
 
 The entire set of .composite files and SCA diagrams form the "architectural model" of FraSCAti.
 
@@ -28,36 +30,36 @@ The entire set of .composite files and SCA diagrams form the "architectural mode
 You can download the .composite and .composite_diagram files below. Note that the files are from the last version of the FraSCAti project. 
 
 
- ===== main SCA composite of FraSCAti (other components are described below) =====
+ #### main SCA composite of FraSCAti (other components are described below) 
 [[Image(wiki:ArchFm:org.ow2.frascati.FraSCAti.png, 40%)]]
 
- ===== implementations, interfaces, bindings and properties =====
+ #### implementations, interfaces, bindings and properties 
 [[Image(wiki:ArchFm:org.ow2.frascati.assembly.factory.AssemblyFactory.png, 50%)]] 
 
- ===== SCA composite of the FraSCAti parser =====
+ #### SCA composite of the FraSCAti parser
 [[Image(wiki:ArchFm:org.ow2.frascati.parser.Parser.png, 40%)]]
 
- ===== SCA composite of the FraSCAti composite parser =====
+ #### SCA composite of the FraSCAti composite parser 
 [[Image(wiki:ArchFm:org.ow2.frascati.parser.CompositeParser.png, 40%)]]
 
- ===== metamodels supported by the FraSCAti SCA parser =====
+ #### metamodels supported by the FraSCAti SCA parser 
 [[Image(wiki:ArchFm:org.ow2.frascati.parser.ScaParser.png, 40%)]] 
 
- ===== membranes =====
+ #### membranes 
 [[Image(wiki:ArchFm:org.ow2.frascati.component.factory.ComponentFactory.png, 40%)]] 
 
- ===== Java compilers and membrane generators =====
+ #### Java compilers and membrane generators 
 [[Image(wiki:ArchFm:org.ow2.frascati.component.factory.juliac.Juliac.png, 40%)]] 
 
- ===== binding factory =====
+ #### binding factory 
 [[Image(wiki:ArchFm:org.ow2.frascati.binding.factory.BindingFactory.png, 30%)]]
 
- ===== services (empty composite at the moment) =====
+ #### services (empty composite at the moment) 
 [[Image(wiki:ArchFm:org.ow2.frascati.Services.png, 10%)]] 
 
 
 
- === Variability Modeling === 
+ ### Variability Modeling 
 
 In order to manage the FraSCAti platform as an SPL, we needed to capture its variability from the existing architecture.
 We chose to rely on a particular kind of variability model, ''Feature Models (FMs)'', based on their wide adoption, the existence of formal semantics, reasoning techniques and tool support.  
@@ -76,36 +78,36 @@ Another approach thus relies on an automated extraction, so that an architectura
 In this web page, we describe how we realize the extraction procedure using FAMILIAR (and show the extracted FMs).
 
 
-== Extraction Procedure ==  
+## Extraction Procedure 
 
 [[Image(wiki:ArchFm:extracting.png, 30%)]]
 
- === 150% architectural feature model === 
+ ### 150% architectural feature model 
 
 The following figure is a visual representation of a so called "150% architectural FM" (you can also download the FM ([attachment:fm150.m FeatureIDE] or [attachment:fm150.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
 [[Image(wiki:ArchFm:fm150.png, 30%)]]
 
- === plugins feature model === 
+ ### plugins feature model
 
 The following figure is a visual representation of a so called "plugins FM" (you can also download the FM ([attachment:fmPlugin.m FeatureIDE] or [attachment:fmPlugin.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
 [[Image(wiki:ArchFm:fmPlugin.png, 20%)]]
 
- === FMFull, an aggregation of the two FMs with constraints === 
+ ### FMFull, an aggregation of the two FMs with constraints 
 
 The following figure is a visual representation of a "FMFull" (you can also download the FM ([attachment:fmFull.m FeatureIDE] or [attachment:fmFull.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
 [[Image(wiki:ArchFm:fmFull.png, 40%)]]
 
- === enforced architectural feature model === 
+ ### enforced architectural feature model 
 
 
 The following figure is a visual representation of the enforced architectural FM (you can also download the FM ([attachment:fmArch.m FeatureIDE] or [attachment:fmArch.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
 [[Image(wiki:ArchFm:fmArch.png, 30%)]]
 
- === how does it work: a simple example illustrated with FAMILIAR === 
+ ### how does it work: a simple example illustrated with FAMILIAR 
 
 
 Let us a take a simple example, summarized by the following figure: 
@@ -131,11 +133,11 @@ A similar FAMILIAR script has been used for computing the enforced architectural
 
 
 
-== Contact == 
+## Contact  
 
- * [http://www.i3s.unice.fr/~acher Mathieu Acher]
- * [http://www.fundp.ac.be/universite/personnes/page_view/01005760/ Anthony Cleve]
- * [http://www.i3s.unice.fr/~collet Philippe Collet] 
- * [http://www.lifl.fr/~merle Philippe Merle]
- * [http://www.lifl.fr/~duchien/Laurence/index.html Laurence Duchien] 
- * [http://www.i3s.unice.fr/~lahire Philippe Lahire]
+ * [Mathieu Acher](http://www.mathieuacher.com/)
+ * [Anthony Cleve](http://www.fundp.ac.be/universite/personnes/page_view/01005760/) 
+ * [Philippe Collet](http://www.i3s.unice.fr/~collet) 
+ * [Philippe Merle](http://www.lifl.fr/~merle)
+ * [Laurence Duchien](http://www.lifl.fr/~duchien/Laurence/index.html)
+ * [Philippe Lahire](http://www.i3s.unice.fr/~lahire) 
