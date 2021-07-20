@@ -6,7 +6,7 @@ We developed a set of syntactic and semantic techniques to compute, reason about
 
 
 Contributors (in alphabetical order): 
-  * [http://www.i3s.unice.fr/%7Eacher Mathieu Acher (University of Namur, Belgium)]
+  * [Mathieu Acher (University of Namur, Belgium)](http://www.mathieuacher.com/)
   * [http://www.i3s.unice.fr/%7Ecollet Philippe Collet (University of Nice Sophia Antipolis, France)] 
   * Patrick Heymans (University of Namur, Belgium)
   * [http://www.i3s.unice.fr/%7Elahire Philippe Lahire (University of Nice Sophia Antipolis, France)]
