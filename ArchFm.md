@@ -38,25 +38,25 @@ You can download the .composite and .composite_diagram files below. Note that th
 ![](attachments/ArchFm/org.ow2.frascati.assembly.factory.AssemblyFactory.png) <!-- .element height="50%" width="50%" -->
 
  #### SCA composite of the FraSCAti parser
-[[Image(wiki:ArchFm:org.ow2.frascati.parser.Parser.png, 40%)]]
+<img src="attachments/ArchFm/org.ow2.frascati.parser.Parser.png" width="50%" />
 
  #### SCA composite of the FraSCAti composite parser 
-[[Image(wiki:ArchFm:org.ow2.frascati.parser.CompositeParser.png, 40%)]]
+<img src="attachments/ArchFm/org.ow2.frascati.parser.CompositeParser.png" width="40%" />
 
  #### metamodels supported by the FraSCAti SCA parser 
-[[Image(wiki:ArchFm:org.ow2.frascati.parser.ScaParser.png, 40%)]] 
+<img src="attachments/ArchFm/org.ow2.frascati.parser.ScaParser.png />
 
  #### membranes 
-[[Image(wiki:ArchFm:org.ow2.frascati.component.factory.ComponentFactory.png, 40%)]] 
+<img src="attachments/ArchFm/org.ow2.frascati.component.factory.ComponentFactory.png />
 
  #### Java compilers and membrane generators 
-[[Image(wiki:ArchFm:org.ow2.frascati.component.factory.juliac.Juliac.png, 40%)]] 
+<img src="attachments/ArchFm/org.ow2.frascati.component.factory.juliac.Juliac.png />
 
  #### binding factory 
-[[Image(wiki:ArchFm:org.ow2.frascati.binding.factory.BindingFactory.png, 30%)]]
+<img src="attachments/ArchFm/org.ow2.frascati.binding.factory.BindingFactory.png" />
 
  #### services (empty composite at the moment) 
-[[Image(wiki:ArchFm:org.ow2.frascati.Services.png, 10%)]] 
+<img src="attachments/ArchFm/org.ow2.frascati.Services.png width="10%" />
 
 
 
@@ -67,11 +67,11 @@ We chose to rely on a particular kind of variability model, ''Feature Models (FM
 Several software artefacts (SCA composite files, Maven descriptors, unformal documents) describe FraSCAti architecture, but variability, though, is not explicitly represented.
 As the FraSCAti main ''software architect (SA)'' had an extensive expertise in the architecture and in its evolution, it was decided to make him model the architecture he has in mind with variation points (see left part of the figure). As a domain expert, he had the ability to elicitate the architectural variation points and explain rationale behind these decisions.
 
-[[Image(wiki:ArchFm:motivation.png, 30%)]]
+<img src="attachments/ArchFm/motivation.png" />
 
 This task resulted in a manually created FM (see Figure, or  download the FM ([attachment:fmMerle.m FeatureIDE] or [attachment:fmMerle.fmprimitives S2T2] format)) and it was clearly daunting, time-consuming and error-prone, requiring substantial effort from the SA.
 
-[[Image(wiki:ArchFm:fmMerle.png, 50%)]]
+<img src="attachments/ArchFm/fmMerle.png" />
 
 In this case as in all large scale architectures, it is very difficult to guarantee that the resulting FM ensures a safe composition of the architectural elements when some features are selected.
 Another approach thus relies on an automated extraction, so that an architectural FM that represents variability of the architecture is automatically extracted from the appropriate artefacts (see right part of the figure). This operation clearly saves time and reduces accidental complexity, but the accuracy of the results directly depends on the quality of the available documents and of the extraction procedure.
@@ -81,53 +81,53 @@ In this web page, we describe how we realize the extraction procedure using FAMI
 
 ## Extraction Procedure 
 
-[[Image(wiki:ArchFm:extracting.png, 30%)]]
+<img src="attachments/ArchFm/extracting.png" />
 
  ### 150% architectural feature model 
 
 The following figure is a visual representation of a so called "150% architectural FM" (you can also download the FM ([attachment:fm150.m FeatureIDE] or [attachment:fm150.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
-[[Image(wiki:ArchFm:fm150.png, 30%)]]
+<img src="attachments/ArchFm/fm150.png" />
 
  ### plugins feature model
 
 The following figure is a visual representation of a so called "plugins FM" (you can also download the FM ([attachment:fmPlugin.m FeatureIDE] or [attachment:fmPlugin.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
-[[Image(wiki:ArchFm:fmPlugin.png, 20%)]]
+<img src="attachments/ArchFm/fmPlugin.png" />
 
  ### FMFull, an aggregation of the two FMs with constraints 
 
 The following figure is a visual representation of a "FMFull" (you can also download the FM ([attachment:fmFull.m FeatureIDE] or [attachment:fmFull.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
-[[Image(wiki:ArchFm:fmFull.png, 40%)]]
+<img src="attachments/ArchFm/fmFull.png" />
 
  ### enforced architectural feature model 
 
 
 The following figure is a visual representation of the enforced architectural FM (you can also download the FM ([attachment:fmArch.m FeatureIDE] or [attachment:fmArch.fmprimitives S2T2] format)), using [http://download.lero.ie/spl/s2t2/ S2T2].
 
-[[Image(wiki:ArchFm:fmArch.png, 30%)]]
+<img src="attachments/ArchFm/fmArch.png" />
 
  ### how does it work: a simple example illustrated with FAMILIAR 
 
 
 Let us a take a simple example, summarized by the following figure: 
-[[Image(wiki:ArchFm:projectionExample3.png, 40%)]]
+<img src="attachments/ArchFm/projectionExample3.png" />
 
 where FMs are examplified versions of FMArch150, FMPlugin, FMArch.
 
 The set of configurations is as follows:
-[[Image(wiki:ArchFm:sFMArch150.png, 20%)]]
-[[Image(wiki:ArchFm:sFMFull.png, 35%)]]
-[[Image(wiki:ArchFm:sFMArch.png, 20%)]]
+<img src="attachments/ArchFm/sFMArch150.png" />
+<img src="attachments/ArchFm/sFMFull.png" />
+<img src="attachments/ArchFm/sFMArch.png" />
 
 
-Using FAMILIAR (the file [attachment:projectionExample.fml] is available for download), we can realize the scenario ('''note:''' the projection operator corresponds to slice in FAMILIAR) ... 
-[[Image(wiki:ArchFm:projectionExampleFML.png, 50%)]]
+Using FAMILIAR (the [file](attachments/ArchFm/projectionExample.fml) is available for download), we can realize the scenario ('''note:''' the projection operator corresponds to slice in FAMILIAR) ... 
+<img src="attachments/ArchFm/projectionExampleFML.png" />
 
 ... and give information to the software architect (e.g., which configurations have been removed from the 150% architectural FM).
 
-[[Image(wiki:ArchFm:projectionExampleEclipseConsole.png, 50%)]]
+<img src="attachments/ArchFm/projectionExampleEclipseConsole.png" />
  
 
 A similar FAMILIAR script has been used for computing the enforced architectural FM of FraSCAti.
